@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EFF6FF;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Phase box gradients -->
+    <linearGradient id="phaseGrad0" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#DB2777;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="phaseGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Arrow marker -->
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#94A3B8"/>
+    </marker>
+    <marker id="arrowDash" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#F97316"/>
+    </marker>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#1E293B" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadowLight" x="-5%" y="-5%" width="115%" height="125%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1E293B" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="320" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="700" fill="#1E293B" letter-spacing="1">Skill 生成六阶段流程</text>
+  <line x1="180" y1="34" x2="720" y2="34" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- === Phase boxes === -->
+  <!-- Phase 0: 需求分析 -->
+  <g filter="url(#shadow)">
+    <rect x="22" y="58" width="124" height="76" rx="12" fill="url(#phaseGrad0)"/>
+  </g>
+  <text x="84" y="82" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Phase 0</text>
+  <text x="84" y="102" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">需求分析</text>
+  <text x="84" y="122" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">分类 / 边界 / 目标</text>
+
+  <!-- Arrow 0→1 -->
+  <line x1="146" y1="96" x2="170" y2="96" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Phase 1: 内容研究 -->
+  <g filter="url(#shadow)">
+    <rect x="172" y="58" width="124" height="76" rx="12" fill="url(#phaseGrad1)"/>
+  </g>
+  <text x="234" y="82" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Phase 1</text>
+  <text x="234" y="102" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">内容研究</text>
+  <text x="234" y="122" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">多源采集 / 框架梳理</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="296" y1="96" x2="320" y2="96" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Phase 2: 验证筛选 -->
+  <g filter="url(#shadow)">
+    <rect x="322" y="58" width="124" height="76" rx="12" fill="url(#phaseGrad2)"/>
+  </g>
+  <text x="384" y="82" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Phase 2</text>
+  <text x="384" y="102" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">验证筛选</text>
+  <text x="384" y="122" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">三重验证 / 去伪存真</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="446" y1="96" x2="470" y2="96" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Phase 3: 编写组装 -->
+  <g filter="url(#shadow)">
+    <rect x="472" y="58" width="124" height="76" rx="12" fill="url(#phaseGrad3)"/>
+  </g>
+  <text x="534" y="82" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Phase 3</text>
+  <text x="534" y="102" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">编写组装</text>
+  <text x="534" y="122" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">结构化 / 标准格式</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="596" y1="96" x2="620" y2="96" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Phase 4: 质量验证 -->
+  <g filter="url(#shadow)">
+    <rect x="622" y="58" width="124" height="76" rx="12" fill="url(#phaseGrad4)"/>
+  </g>
+  <text x="684" y="82" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Phase 4</text>
+  <text x="684" y="102" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">质量验证</text>
+  <text x="684" y="122" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">功能 / 边界 / 风格</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="746" y1="96" x2="770" y2="96" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Phase 5: 迭代发布 -->
+  <g filter="url(#shadow)">
+    <rect x="772" y="58" width="124" height="76" rx="12" fill="url(#phaseGrad5)"/>
+  </g>
+  <text x="834" y="82" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">Phase 5</text>
+  <text x="834" y="102" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">迭代发布</text>
+  <text x="834" y="122" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">版本化 / 平台适配</text>
+
+  <!-- === Feedback loop: Phase 4 → Phase 2 === -->
+  <!-- Down from Phase 4 -->
+  <path d="M684 134 L684 200 L384 200 L384 134" 
+        stroke="#F97316" stroke-width="2" fill="none" 
+        stroke-dasharray="6,4"
+        marker-end="url(#arrowDash)"/>
+  <!-- Feedback label background -->
+  <rect x="463" y="205" width="178" height="22" rx="6" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
+  <text x="451" y="220" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#EA580C">
+    <tspan x="552" dy="0">失败时迭代（最多 2 次）</tspan>
+  </text>
+
+  <!-- === Bottom info strip === -->
+  <rect x="22" y="254" width="856" height="50" rx="10" fill="white" fill-opacity="0.6" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Dots and description -->
+  <circle cx="50" cy="279" r="5" fill="#2563EB"/>
+  <text x="62" y="283" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#475569">每个阶段对应完整的输入→处理→输出规范</text>
+  <circle cx="320" cy="279" r="5" fill="#F97316"/>
+  <text x="332" y="283" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#475569">橙色虚线 = 质量未达标时的迭代回路</text>
+  <circle cx="570" cy="279" r="5" fill="#059669"/>
+  <text x="582" y="283" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#475569">绿色终态 = 正式发布上线</text>
+</svg>

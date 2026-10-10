@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 580" width="700" height="580">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EEF2FF;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Required gradient (deep blue) -->
+    <linearGradient id="requiredGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Recommended gradient (indigo/purple) -->
+    <linearGradient id="recommendedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#4338CA;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Optional gradient (teal) -->
+    <linearGradient id="optionalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D9488;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0F766E;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Shadow -->
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1E293B" flood-opacity="0.14"/>
+    </filter>
+    <filter id="shadowMd" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1E293B" flood-opacity="0.10"/>
+    </filter>
+    <filter id="shadowSm" x="-8%" y="-8%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1E293B" flood-opacity="0.08"/>
+    </filter>
+    <!-- Arrow markers -->
+    <marker id="arrowGray" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto">
+      <polygon points="0 0, 9 4, 0 8" fill="#94A3B8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="500" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="350" y="32" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="15" font-weight="700" fill="#1E293B" letter-spacing="0.5">标准 Skill 目录结构</text>
+  <line x1="140" y1="40" x2="560" y2="40" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- ============ Connection Lines (drawn before boxes so boxes sit on top) ============ -->
+  <!-- Center to left-top (references) -->
+  <line x1="287" y1="208" x2="215" y2="192" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowGray)"/>
+  <!-- Center to right-top (assets) -->
+  <line x1="413" y1="208" x2="485" y2="192" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowGray)"/>
+  <!-- Center to left-bottom (scripts) -->
+  <line x1="287" y1="272" x2="215" y2="320" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowGray)"/>
+  <!-- Center to right-bottom (tests) -->
+  <line x1="413" y1="272" x2="485" y2="320" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowGray)"/>
+  <!-- Center to bottom (phases) -->
+  <line x1="350" y1="290" x2="350" y2="438" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowGray)"/>
+
+  <!-- ============ Center: SKILL.md ============ -->
+  <g filter="url(#shadow)">
+    <rect x="263" y="190" width="174" height="100" rx="16" fill="url(#requiredGrad)"/>
+  </g>
+  <!-- Required badge -->
+  <rect x="277" y="202" width="38" height="16" rx="8" fill="rgba(255,255,255,0.25)"/>
+  <text x="296" y="214" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">必需</text>
+  <text x="350" y="237" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="800" fill="#FFFFFF">SKILL.md</text>
+  <text x="350" y="257" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.85)">核心能力定义文件</text>
+  <text x="350" y="272" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.75)">入口 · 不可缺少</text>
+
+  <!-- ============ Left-Top: references/ ============ -->
+  <g filter="url(#shadowMd)">
+    <rect x="50" y="100" width="164" height="140" rx="14" fill="url(#recommendedGrad)"/>
+  </g>
+  <!-- Recommended badge -->
+  <rect x="64" y="112" width="38" height="16" rx="8" fill="rgba(255,255,255,0.25)"/>
+  <text x="83" y="124" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">推荐</text>
+  <text x="108" y="124" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">references/</text>
+  <text x="108" y="140" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">调研 &amp; 决策</text>
+
+  <!-- Sub items -->
+  <rect x="65" y="152" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="74" y="167" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📁 research/</text>
+  <text x="145" y="167" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">调研资料</text>
+
+  <rect x="65" y="178" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="74" y="193" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📁 sources/</text>
+  <text x="145" y="193" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">原始来源</text>
+
+  <rect x="65" y="204" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="74" y="219" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📄 decisions.md</text>
+  <text x="150" y="219" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">决策记录</text>
+
+  <!-- ============ Right-Top: assets/ ============ -->
+  <g filter="url(#shadowMd)">
+    <rect x="486" y="100" width="164" height="140" rx="14" fill="url(#recommendedGrad)"/>
+  </g>
+  <!-- Recommended badge -->
+  <rect x="500" y="112" width="38" height="16" rx="8" fill="rgba(255,255,255,0.25)"/>
+  <text x="519" y="124" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">推荐</text>
+  <text x="544" y="124" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">assets/</text>
+  <text x="544" y="140" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">资源 &amp; 模板</text>
+
+  <rect x="500" y="152" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="509" y="167" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📁 configs/</text>
+  <text x="570" y="167" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">配置文件</text>
+
+  <rect x="500" y="178" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="509" y="193" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📁 examples/</text>
+  <text x="574" y="193" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">示例文件</text>
+
+  <rect x="500" y="204" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="509" y="219" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📁 templates/</text>
+  <text x="576" y="219" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">输出模板</text>
+
+  <!-- ============ Left-Bottom: scripts/ ============ -->
+  <g filter="url(#shadowMd)">
+    <rect x="50" y="308" width="164" height="116" rx="14" fill="url(#optionalGrad)"/>
+  </g>
+  <!-- Optional badge -->
+  <rect x="64" y="320" width="38" height="16" rx="8" fill="rgba(255,255,255,0.25)"/>
+  <text x="83" y="332" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">可选</text>
+  <text x="108" y="332" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">scripts/</text>
+  <text x="108" y="348" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">自动化辅助</text>
+
+  <rect x="65" y="360" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="74" y="375" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">🔧 helpers/</text>
+  <text x="138" y="375" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">辅助脚本</text>
+
+  <rect x="65" y="386" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="74" y="401" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">⚙️ validate-*.sh</text>
+  <text x="164" y="401" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">验证脚本</text>
+
+  <!-- ============ Right-Bottom: tests/ ============ -->
+  <g filter="url(#shadowMd)">
+    <rect x="486" y="308" width="164" height="116" rx="14" fill="url(#recommendedGrad)"/>
+  </g>
+  <!-- Recommended badge -->
+  <rect x="500" y="320" width="38" height="16" rx="8" fill="rgba(255,255,255,0.25)"/>
+  <text x="519" y="332" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">推荐</text>
+  <text x="544" y="332" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">tests/</text>
+  <text x="544" y="348" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">质量验证</text>
+
+  <rect x="500" y="360" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="509" y="375" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📋 cases/</text>
+  <text x="558" y="375" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">测试用例</text>
+
+  <rect x="500" y="386" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="509" y="401" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">✅ expected/</text>
+  <text x="572" y="401" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="rgba(255,255,255,0.6)">预期输出</text>
+
+  <!-- ============ Bottom-Center: phases/ ============ -->
+  <g filter="url(#shadowMd)">
+    <rect x="268" y="440" width="164" height="100" rx="14" fill="url(#optionalGrad)"/>
+  </g>
+  <!-- Optional badge -->
+  <rect x="282" y="452" width="38" height="16" rx="8" fill="rgba(255,255,255,0.25)"/>
+  <text x="301" y="464" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">可选</text>
+  <text x="326" y="464" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">phases/</text>
+  <text x="326" y="480" text-anchor="start" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">分阶段指令</text>
+
+  <rect x="283" y="492" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="292" y="507" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📄 00-init.md</text>
+
+  <rect x="283" y="518" width="138" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <text x="292" y="533" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">📄 01-research.md</text>
+
+  <!-- ============ Legend ============ -->
+  <rect x="50" y="554" width="600" height="36" rx="10" fill="white" fill-opacity="0.65" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Required -->
+  <rect x="80" y="564" width="30" height="16" rx="8" fill="#1D4ED8"/>
+  <text x="96" y="576" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">必需</text>
+  <text x="118" y="576" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#475569">Skill 必须包含</text>
+  <!-- Recommended -->
+  <rect x="260" y="564" width="30" height="16" rx="8" fill="#4338CA"/>
+  <text x="276" y="576" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">推荐</text>
+  <text x="298" y="576" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#475569">强烈建议提供</text>
+  <!-- Optional -->
+  <rect x="440" y="564" width="30" height="16" rx="8" fill="#0F766E"/>
+  <text x="456" y="576" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" font-weight="600" fill="white">可选</text>
+  <text x="478" y="576" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#475569">视复杂度决定</text>
+</svg>

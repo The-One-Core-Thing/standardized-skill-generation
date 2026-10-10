@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="700" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EEF2FF;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Top beam gradient -->
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1D4ED8;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#2563EB;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Left pillar gradient -->
+    <linearGradient id="pillar1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#4338CA;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Middle pillar gradient -->
+    <linearGradient id="pillar2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Right pillar gradient -->
+    <linearGradient id="pillar3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#5B21B6;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Base gradient -->
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E293B;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#334155;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Label tag gradients -->
+    <linearGradient id="tag1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EEF2FF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#E0E7FF;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="tag2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EFF6FF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#DBEAFE;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="tag3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F5F3FF;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EDE9FE;stop-opacity:1"/>
+    </linearGradient>
+    <!-- Shadow filters -->
+    <filter id="shadow" x="-10%" y="-10%" width="125%" height="135%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1E293B" flood-opacity="0.18"/>
+    </filter>
+    <filter id="shadowBeam" x="-5%" y="-15%" width="115%" height="145%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#1E293B" flood-opacity="0.20"/>
+    </filter>
+    <filter id="shadowSm" x="-8%" y="-15%" width="120%" height="145%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1E293B" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="400" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="350" y="28" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" font-weight="700" fill="#1E293B">三大理论支柱关系图</text>
+  <line x1="160" y1="36" x2="540" y2="36" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- ============ Base / Foundation ============ -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="330" width="580" height="48" rx="12" fill="url(#baseGrad)"/>
+  </g>
+  <!-- Base text -->
+  <text x="350" y="349" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" letter-spacing="2">基础</text>
+  <text x="350" y="367" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">开放标准  +  跨平台兼容</text>
+
+  <!-- ============ THREE PILLARS ============ -->
+
+  <!-- Pillar 1: Agent Skills (Left, x center=175) -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="148" width="190" height="182" rx="14" fill="url(#pillar1Grad)"/>
+  </g>
+  <!-- Pillar top cap (slightly lighter) -->
+  <rect x="80" y="148" width="190" height="22" rx="14" fill="rgba(255,255,255,0.12)"/>
+  <!-- Pillar title -->
+  <text x="175" y="178" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">Agent Skills</text>
+  <text x="175" y="196" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.9)">开放标准</text>
+  <!-- Divider -->
+  <line x1="100" y1="208" x2="250" y2="208" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <!-- Label tag -->
+  <g filter="url(#shadowSm)">
+    <rect x="96" y="218" width="158" height="34" rx="8" fill="url(#tag1Grad)"/>
+  </g>
+  <text x="175" y="231" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="#4338CA" font-weight="600">核心贡献</text>
+  <text x="175" y="246" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#3730A3">格式 &amp; 加载机制</text>
+  <!-- Bullet points -->
+  <circle cx="107" cy="270" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="116" y="274" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">标准化文件格式</text>
+  <circle cx="107" cy="290" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="116" y="294" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">平台通用加载协议</text>
+  <circle cx="107" cy="310" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="116" y="314" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">能力边界定义规范</text>
+
+  <!-- Pillar 2: Nuwa-Skill (Center, x center=350) -->
+  <!-- Slightly taller to indicate importance -->
+  <g filter="url(#shadow)">
+    <rect x="255" y="118" width="190" height="212" rx="14" fill="url(#pillar2Grad)"/>
+  </g>
+  <rect x="255" y="118" width="190" height="22" rx="14" fill="rgba(255,255,255,0.14)"/>
+  <!-- Pillar title -->
+  <text x="350" y="148" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">Nuwa-Skill</text>
+  <text x="350" y="166" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.9)">实战系统</text>
+  <!-- Divider -->
+  <line x1="272" y1="178" x2="428" y2="178" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <!-- Label tag -->
+  <g filter="url(#shadowSm)">
+    <rect x="270" y="188" width="160" height="34" rx="8" fill="url(#tag2Grad)"/>
+  </g>
+  <text x="350" y="201" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="#1D4ED8" font-weight="600">核心贡献</text>
+  <text x="350" y="216" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#1E40AF">生成方法论 &amp; 验证体系</text>
+  <!-- Bullet points -->
+  <circle cx="271" cy="240" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="280" y="244" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">六阶段生成流程</text>
+  <circle cx="271" cy="260" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="280" y="264" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">三重质量验证模型</text>
+  <circle cx="271" cy="280" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="280" y="284" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">标准目录结构规范</text>
+  <circle cx="271" cy="300" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="280" y="304" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">跨平台发布策略</text>
+
+  <!-- Pillar 3: Harness Engineering (Right, x center=525) -->
+  <g filter="url(#shadow)">
+    <rect x="430" y="148" width="190" height="182" rx="14" fill="url(#pillar3Grad)"/>
+  </g>
+  <rect x="430" y="148" width="190" height="22" rx="14" fill="rgba(255,255,255,0.12)"/>
+  <text x="525" y="178" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" font-weight="700" fill="white">Harness</text>
+  <text x="525" y="196" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.9)">Engineering</text>
+  <!-- Divider -->
+  <line x1="450" y1="208" x2="600" y2="208" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+  <!-- Label tag -->
+  <g filter="url(#shadowSm)">
+    <rect x="446" y="218" width="158" height="34" rx="8" fill="url(#tag3Grad)"/>
+  </g>
+  <text x="525" y="231" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="9" fill="#5B21B6" font-weight="600">核心贡献</text>
+  <text x="525" y="246" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="#4C1D95">约束机制 &amp; 反馈回路</text>
+  <!-- Bullet points -->
+  <circle cx="447" cy="270" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="456" y="274" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">输入约束框架</text>
+  <circle cx="447" cy="290" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="456" y="294" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">质量反馈机制</text>
+  <circle cx="447" cy="310" r="3" fill="rgba(255,255,255,0.6)"/>
+  <text x="456" y="314" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="10" fill="rgba(255,255,255,0.9)">迭代优化循环</text>
+
+  <!-- ============ Top Beam ============ -->
+  <g filter="url(#shadowBeam)">
+    <rect x="60" y="56" width="580" height="72" rx="14" fill="url(#beamGrad)"/>
+  </g>
+  <!-- Beam decorative pattern -->
+  <rect x="60" y="56" width="580" height="18" rx="14" fill="rgba(255,255,255,0.08)"/>
+  <!-- Beam text -->
+  <text x="350" y="82" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" letter-spacing="3">顶层目标</text>
+  <text x="350" y="108" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="1">标准化 Skill 生成</text>
+
+  <!-- Beam bottom connection points (visual detail) -->
+  <rect x="155" y="126" width="40" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="330" y="126" width="40" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+  <rect x="505" y="126" width="40" height="22" rx="6" fill="rgba(255,255,255,0.15)"/>
+</svg>

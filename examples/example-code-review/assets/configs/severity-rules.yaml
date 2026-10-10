@@ -1,0 +1,241 @@
+# Severity Rules - 代码审查问题严重度分级规则
+#
+# 用途：为 code-review-assistant Skill 提供严重度判定的可查询规则表
+# 版本：1.0.0
+# 维度：correctness（正确性）/ security（安全）/ maintainability（可维护性）/ performance（性能）
+# 等级：critical（必须改，阻塞合并）/ major（应该改，强烈建议）/ minor（可以改）/ nit（顺手改）
+
+version: "1.0.0"
+
+# ───────────────────────────────────────────────
+# 安全 - Security
+# 默认严重度上限：critical
+# ───────────────────────────────────────────────
+security:
+  - id: SEC-001
+    name: SQL 注入
+    pattern: 字符串拼接构造 SQL，参数来自用户输入
+    severity: critical
+    rationale: 直接导致数据库泄露或被改写
+    references: [OWASP A03:2021 Injection, CWE-89]
+
+  - id: SEC-002
+    name: 命令注入
+    pattern: exec / system / Runtime.exec 拼接用户输入
+    severity: critical
+    references: [CWE-78]
+
+  - id: SEC-003
+    name: 路径穿越
+    pattern: open / read 文件路径含未校验的用户输入
+    severity: critical
+    references: [CWE-22]
+
+  - id: SEC-004
+    name: 不安全反序列化
+    pattern: pickle.loads / yaml.load(非 safe_load) / Java ObjectInputStream
+    severity: critical
+    references: [CWE-502]
+
+  - id: SEC-005
+    name: 敏感信息硬编码
+    pattern: 密钥、密码、token 字面量出现在源码
+    severity: critical
+    rationale: 即使未提交到公网，也增加凭据轮换成本
+    references: [CWE-798]
+
+  - id: SEC-006
+    name: 鉴权缺失
+    pattern: 公开 API 路由未检查身份/权限
+    severity: critical
+    references: [OWASP A01:2021]
+
+  - id: SEC-007
+    name: XSS - 未转义渲染
+    pattern: 用户输入直接拼接到 HTML / innerHTML
+    severity: major
+    references: [CWE-79]
+
+  - id: SEC-008
+    name: 不安全随机
+    pattern: Math.random / rand 用于 token、密钥生成
+    severity: major
+    references: [CWE-330]
+
+  - id: SEC-009
+    name: 日志泄露敏感信息
+    pattern: 日志输出 password / token / cookie 字段
+    severity: major
+    references: [CWE-532]
+
+  - id: SEC-010
+    name: SSRF
+    pattern: 转发用户提供的 URL 而不校验
+    severity: major
+    references: [CWE-918]
+
+# ───────────────────────────────────────────────
+# 正确性 - Correctness
+# 默认严重度上限：critical
+# ───────────────────────────────────────────────
+correctness:
+  - id: COR-001
+    name: 错误吞没
+    pattern: catch{} / except: pass / err 被丢弃
+    severity: major
+    note: 在错误是关键路径（DB / 网络）时升为 critical
+
+  - id: COR-002
+    name: 资源未释放
+    pattern: file / db / socket / context 未 close 或 cancel
+    severity: major
+    note: 在并发场景或长生命周期函数中升为 critical
+
+  - id: COR-003
+    name: 空指针 / 空值未检查
+    pattern: 对可能为 nil / null / undefined 的对象直接访问字段
+    severity: major
+
+  - id: COR-004
+    name: 并发竞态
+    pattern: 共享变量未加锁 / 闭包捕获循环变量 / range 取地址
+    severity: critical
+    rationale: 偶发问题，生产难复现，必须前置发现
+
+  - id: COR-005
+    name: 边界条件遗漏
+    pattern: 空数组、单元素、最大值、负数等边界未处理
+    severity: major
+
+  - id: COR-006
+    name: 浮点比较金额
+    pattern: float / double 表示金额并用 == 比较
+    severity: critical
+    references: [Effective Java Item 60]
+
+  - id: COR-007
+    name: 时区错误
+    pattern: 解析时间未指定时区 / 用 Now() 直接比较跨服务时间
+    severity: major
+
+  - id: COR-008
+    name: 死循环 / 退出条件缺失
+    pattern: while/for 循环退出条件依赖外部副作用且无超时
+    severity: critical
+
+# ───────────────────────────────────────────────
+# 可维护性 - Maintainability
+# 默认严重度上限：major
+# ───────────────────────────────────────────────
+maintainability:
+  - id: MNT-001
+    name: 函数过长
+    pattern: 单函数 > 50 行
+    severity: minor
+    note: > 100 行升为 major
+
+  - id: MNT-002
+    name: 圈复杂度过高
+    pattern: 嵌套 > 3 层 / cyclomatic complexity > 10
+    severity: major
+
+  - id: MNT-003
+    name: 命名含糊
+    pattern: data / tmp / handle / process / utils 等无信息量命名
+    severity: minor
+
+  - id: MNT-004
+    name: 重复代码
+    pattern: 3 处以上结构高度相似的代码块
+    severity: minor
+    note: 5 处以上升为 major
+
+  - id: MNT-005
+    name: 神秘常量
+    pattern: 字面量数字/字符串没有命名或注释
+    severity: nit
+
+  - id: MNT-006
+    name: 注释撒谎
+    pattern: 注释描述与代码实际行为不一致
+    severity: major
+    rationale: 比没注释更糟，会误导后续维护者
+
+  - id: MNT-007
+    name: 死代码
+    pattern: 永远不可达的分支 / 被注释掉的代码
+    severity: minor
+
+  - id: MNT-008
+    name: 抽象层次混乱
+    pattern: 业务逻辑与底层 IO / 框架细节混在同一函数
+    severity: major
+
+# ───────────────────────────────────────────────
+# 性能 - Performance
+# 默认严重度上限：major
+# ───────────────────────────────────────────────
+performance:
+  - id: PRF-001
+    name: N+1 查询
+    pattern: 循环内查 DB / 调外部服务
+    severity: major
+    note: 数据规模 > 100 时升为 critical
+
+  - id: PRF-002
+    name: 阻塞调用无超时
+    pattern: HTTP / RPC / IO 调用未设置 timeout
+    severity: major
+
+  - id: PRF-003
+    name: 大对象按值传递
+    pattern: 大 struct / slice 不必要地拷贝
+    severity: minor
+
+  - id: PRF-004
+    name: 字符串循环拼接
+    pattern: 循环内用 + 拼接字符串
+    severity: minor
+
+  - id: PRF-005
+    name: 正则在循环内编译
+    pattern: 循环体内反复 Compile / new RegExp
+    severity: major
+
+  - id: PRF-006
+    name: 同步锁过粗
+    pattern: 锁内包含 IO / 长耗时操作
+    severity: major
+
+  - id: PRF-007
+    name: 缓存缺失
+    pattern: 纯函数结果在热路径反复计算
+    severity: minor
+
+# ───────────────────────────────────────────────
+# 升降级修饰符（context 可触发分级浮动）
+# ───────────────────────────────────────────────
+modifiers:
+  upgrade_to_critical_when:
+    - 涉及金融 / 支付 / 鉴权场景
+    - 处理外部不可信输入
+    - 出现在公网暴露的入口
+    - 影响数据持久化的写操作
+
+  downgrade_to_minor_when:
+    - 仅出现在测试代码 / 脚本 / 一次性工具中
+    - 已被注释明确标注 "TODO / FIXME / Known issue"
+    - 在用户提供的 context 中说明是临时方案
+
+# ───────────────────────────────────────────────
+# 边界规则
+# ───────────────────────────────────────────────
+guardrails:
+  max_findings_per_report: 15
+  max_lines_per_review: 500
+  questions_not_assertions_when_uncertain: true
+  skip_pure_style_preferences: true
+  forbidden_in_output:
+    - 评价代码作者的语言
+    - 没有改进建议的纯吐槽
+    - 编造未存在的 API
